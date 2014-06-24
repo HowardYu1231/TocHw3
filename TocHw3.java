@@ -50,9 +50,9 @@ public class TocHw3 {
 				 try{
 					 JSONObject ob = obj.getJSONObject(index);
 					 index++;
-					 s_to_compare = ob.getString("¶mÂí¥«°Ï");
-					 road_to_compare = ob.getString("¤g¦a°Ï¬q¦ì¸m©Î«Øª«°ÏªùµP");
-					 year_to_compare = ob.getInt("¥æ©ö¦~¤ë");
+					 s_to_compare = ob.getString("é„‰éŽ®å¸‚å€");
+					 road_to_compare = ob.getString("åœŸåœ°å€æ®µä½ç½®æˆ–å»ºç‰©å€é–€ç‰Œ");
+					 year_to_compare = ob.getInt("äº¤æ˜“å¹´æœˆ");
 					 
 					 //compare
 					 //if(s_to_compare.equals(s_to_find))
@@ -62,10 +62,10 @@ public class TocHw3 {
 						 if(road_to_compare.indexOf(argv[2]) != -1)
 						 {
 							 int target_year = year_to_compare-(Integer.valueOf(argv[3])*100);
-							 int id_value = ob.getInt("Á`»ù¤¸");
+							 int id_value = ob.getInt("ç¸½åƒ¹å…ƒ");
 							 if(target_year >= 0)
 							 {
-								 //¥[¤J§PÂ_
+								 //åŠ å…¥åˆ¤æ–·
 								 System.out.print(argv[1]);
 								 System.out.print("\t" +  road_to_compare);
 								 System.out.printf("\t %d" ,year_to_compare);
