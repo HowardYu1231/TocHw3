@@ -34,7 +34,7 @@ public class TocHw3 {
 			 
 			 */
 			 //new version - Read URL directly
-		     BufferedReader in = new BufferedReader(new InputStreamReader(pageUrl.openStream(),"UTF-8"));
+		     	 BufferedReader in = new BufferedReader(new InputStreamReader(pageUrl.openStream(),"UTF-8"));
 			 JSONArray obj = new JSONArray(new JSONTokener(in));
 			 
 			 
