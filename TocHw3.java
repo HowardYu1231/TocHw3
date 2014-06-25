@@ -14,9 +14,6 @@ public class TocHw3 {
 			 if(argv.length == 4)
 			 {
 			 
-			 //JSONArray obj = new JSONArray(new JSONTokener(new FileReader(new File("price.json"))));  
-			 //JSONArray obj = new JSONArray(new JSONTokener(new FileReader(new File(argv[0]))));
-			 
 			 System.out.println("Copy JSON file from the URL!");
 			 System.out.println("Please wait...");
 			 
@@ -24,6 +21,7 @@ public class TocHw3 {
 			 //the following code between (//---) referenced from the website below
 			 //http://robertvmp.pixnet.net/blog/post/26585200-java---%E8%AE%80%E7%B6%B2%E9%A0%81%E7%AF%84%E4%BE%8B-
 			 URL pageUrl = new URL(argv[0]);
+			 /*
 			 BufferedReader buffer_input_string = new BufferedReader(new InputStreamReader(pageUrl.openStream(), "UTF-8"));
 			 BufferedWriter buffer_output_string = new BufferedWriter(new FileWriter("URL.json", false));
 			 String oneLine = null ;
@@ -33,8 +31,14 @@ public class TocHw3 {
 			 buffer_output_string.close();
 			 buffer_input_string.close(); 
 			//---
-			
-			 JSONArray obj = new JSONArray(new JSONTokener(new FileReader(new File("URL.json"))));  
+			 
+			 */
+			 //new version - Read URL directly
+		     BufferedReader in = new BufferedReader(new InputStreamReader(pageUrl.openStream(),"UTF-8"));
+			 JSONArray obj = new JSONArray(new JSONTokener(in));
+			 
+			 
+			 //JSONArray obj = new JSONArray(new JSONTokener(new FileReader(new File("URL.json"))));  
 			
 			 
 			 boolean conti = true ; 
